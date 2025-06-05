@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+      (function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){
+              (m[i].a=m[i].a||[]).push(arguments)
+          };
+          m[i].l=1*new Date();
+  		m[k]=m[k]||[];m[k].push({ "ytm.start": m[i].l, event: "ytm.js" });
+          for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) {
+                  return;
+              }
+          }
+          k=e.createElement(t),
+          a=e.getElementsByTagName(t)[0],
+          k.async=1,
+          k.src=r,
+          a.parentNode.insertBefore(k,a)}
+      )(window, document, "script", "https://mc-test.yandex.ru/metrika/tag.js?id=123", "ym", "dataLayer");
+  
+      ym(123, "init", { ssr: true });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/123" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+
+    <title>Тестирование кнопок и доходов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: white;
+            background: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Тестирование кнопок с разными значениями</h2>
+        
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Текст: 1000.95 рублей</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Валюта сокращение: 990.95 руб.</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Валюта спец символ: &#x20bd; 1500 | $ 50</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>UTF-16: 𝟡𝟘𝟘.𝟚𝟘 ₽</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>1000 рублей : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non pulvinar justo. Sed cursus dictum est, sed consequat risus maximus in. Morbi eget ipsum vitae velit tincidunt sodales. Nulla facilisi. Suspendisse sed arcu non odio venenatis consectetur. Curabitur auctor dapibus elit, nec consectetur purus consectetur vel. Duis scelerisque justo vitae mi consectetur, et vulputate metus vehicula. Praesent facilisis enim ut felis efficitur, sit amet iaculis lorem elementum. Phasellus et odio in nunc efficitur cursus. Vestibulum et lacus nulla. Quisque facilisis arcu at mauris ultricies convallis. Nam ac ligula at mi pellentesque cursus. Integer volutpat ex vel dui efficitur, a faucibus libero dictum.</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Просто число: 123456</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Запятая в начале: ,500</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Запятая неправильное положение: 5,00,0</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Нули в начале: 000123</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Пробелы неправильное положение:  1 00 0</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Иероглифы: 金钱 500</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Текст с цифрами: Скидка – 3 090 ₽</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Символы: +166 бонусов</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Номер телефона: +7 999 123-45-67</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Формулы (степени): 1.5 × 10³</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Отрицательное значение: -3 090 ₽</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>Валюта латинское сокращение: 4,709 RUR</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>HTML: &lt;price&gt;1000.95&lt;/price&gt;</p>
+        </div>
+        <div class="section">
+            <a class="button" href="#">Купить</a>
+            <p>JSON: {"price": 1000.95}</p>
+        </div>
+
+        <h2>Формы с кнопками и ценами</h2>
+
+        <div class="section">
+            <h3>Форма с текстом</h3>
+            <form>
+                <label for="text-price">Цена:</label>
+                <input type="text" id="text-price" name="text-price" value="1000.95 рублей">
+                <input type="submit" value="Купить">
+            </form>
+        </div>
+
+        <div class="section">
+            <h3>Форма с валютой спец символов</h3>
+            <form>
+                <label for="symbol-price">Цена:</label>
+                <input type="text" id="symbol-price" name="symbol-price" value="&#x20bd; 1500 | $ 50">
+                <input type="submit" value="Купить">
+            </form>
+        </div>
+
+        <div class="section">
+            <h3>Форма с валютой латинские сокращения</h3>
+            <form>
+                <label for="latin-price">Цена:</label>
+                <input type="text" id="latin-price" name="latin-price" value="4,709 RUR">
+                <input type="submit" value="Купить">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
